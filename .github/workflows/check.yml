@@ -26,7 +26,7 @@ jobs:
         env:
           PM_COCKPIT_WITHOUT_SCREENS: "1"
         run: |
-          uv venv
+          uv venv --clear
           uv pip install "pm-cockpit @ git+https://github.com/skywalkr2/ProjectManagementAgent@claude/tender-tesla-16a8ob"
       - name: Read the catalog as the app does
         run: uv run --no-project python check.py
