@@ -13,7 +13,7 @@ packs:
   publisher: skywalkr2
   maintainers: true
   updated: '2026-10-11'
-  version: 0.0.6
+  version: 0.0.7
   plugin_api: '>=0.3,<0.4'
   price:
     model: see_publisher
@@ -29,12 +29,8 @@ packs:
     - google/mailing-lists
     - google/automatic-replies
     - google/answers-only
-    setup_steps:
-    - google/app-registration
     help:
     - help.md
-    wording:
-    - wording.yaml
   requires:
     network:
     - accounts.google.com
@@ -55,7 +51,7 @@ packs:
   publisher: skywalkr2
   maintainers: true
   updated: '2026-10-11'
-  version: 0.0.6
+  version: 0.0.7
   plugin_api: '>=0.3,<0.4'
   price:
     model: see_publisher
@@ -71,12 +67,8 @@ packs:
     - microsoft/mailing-lists
     - microsoft/automatic-replies
     - microsoft/answers-only
-    setup_steps:
-    - microsoft/app-registration
     help:
     - help.md
-    wording:
-    - wording.yaml
   requires:
     network:
     - login.microsoftonline.com
