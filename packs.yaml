@@ -1,0 +1,8 @@
+# The PM Cockpit packs catalog: the file the app's Add-ons screen reads (PM Cockpit design 3.11).
+# Release builds of the app read it from this file's raw address on the main branch.
+#
+# Each entry is shown to people as plain text. The app writes what a pack adds, reaches and keeps from `provides`
+# and `requires`, so copy those from the pack's plugin.yaml exactly; its AI costs are priced from `ai_jobs` on each
+# person's own accounts. See the README for every field and the rules for being listed.
+version: 1
+packs: []
