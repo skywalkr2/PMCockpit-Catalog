@@ -60,7 +60,9 @@ get it ("Ask the publisher for the package file, then: uv tool install --with <t
 
 ## Being listed
 
+- Packs are listed by the process in [PUBLISHING.md](PUBLISHING.md): the pack's builder asks, the PM Cockpit host
+  session checks and opens a pull request, and the owner merges it. Nobody else writes to `main`.
 - For now the catalog lists only packs made by PM Cockpit's maintainers.
-- Change `packs.yaml` in a pull request. The check on every change reads the file exactly as the app does and fails
-  on any entry the app would leave out, any id listed twice, or anything it can't read.
+- The check on every change reads the file exactly as the app does and fails on any entry the app would leave out,
+  any id listed twice, or anything it can't read.
 - Keep entries current: a new version, a new price or a change to what a pack provides or requires is a change here.
