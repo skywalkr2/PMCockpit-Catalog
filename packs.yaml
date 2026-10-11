@@ -5,4 +5,85 @@
 # and `requires`, so copy those from the pack's plugin.yaml exactly; its AI costs are priced from `ai_jobs` on each
 # person's own accounts. See the README for every field and the rules for being listed.
 version: 1
-packs: []
+packs:
+- id: google
+  name: Google mail and calendar
+  summary: Lets the assistant keep reading your Gmail and Google Calendar. It signs in as you on Google's own page and only
+    reads.
+  publisher: skywalkr2
+  maintainers: true
+  updated: '2026-10-11'
+  version: 0.0.6
+  plugin_api: '>=0.3,<0.4'
+  price:
+    model: see_publisher
+  install: 'Ask the publisher for the package file, then: uv tool install --with <the file> pm-cockpit'
+  demo: false
+  provides:
+    sign_ins:
+    - google/account
+    connectors:
+    - google/calendar
+    - google/mail
+    triage_matchers:
+    - google/mailing-lists
+    - google/automatic-replies
+    - google/answers-only
+    setup_steps:
+    - google/app-registration
+    help:
+    - help.md
+    wording:
+    - wording.yaml
+  requires:
+    network:
+    - accounts.google.com
+    - oauth2.googleapis.com
+    - www.googleapis.com
+    - gmail.googleapis.com
+    secrets:
+    - client-id
+    - client-secret
+    data_levels:
+    - open
+    - internal
+    tools: []
+- id: microsoft
+  name: Microsoft Outlook mail and calendar
+  summary: Lets the assistant keep reading your Outlook mail and calendar. It signs in as you on Microsoft's own page and
+    only reads.
+  publisher: skywalkr2
+  maintainers: true
+  updated: '2026-10-11'
+  version: 0.0.6
+  plugin_api: '>=0.3,<0.4'
+  price:
+    model: see_publisher
+  install: 'Ask the publisher for the package file, then: uv tool install --with <the file> pm-cockpit'
+  demo: false
+  provides:
+    sign_ins:
+    - microsoft/account
+    connectors:
+    - microsoft/calendar
+    - microsoft/mail
+    triage_matchers:
+    - microsoft/mailing-lists
+    - microsoft/automatic-replies
+    - microsoft/answers-only
+    setup_steps:
+    - microsoft/app-registration
+    help:
+    - help.md
+    wording:
+    - wording.yaml
+  requires:
+    network:
+    - login.microsoftonline.com
+    - graph.microsoft.com
+    secrets:
+    - client-id
+    data_levels:
+    - open
+    - internal
+    tools: []
