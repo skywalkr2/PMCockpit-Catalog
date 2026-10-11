@@ -1,0 +1,22 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - name: Install PM Cockpit (without its web screens)
+        env:
+          PM_COCKPIT_WITHOUT_SCREENS: "1"
+        run: |
+          uv venv
+          uv pip install "pm-cockpit @ git+https://github.com/skywalkr2/ProjectManagementAgent@claude/tender-tesla-16a8ob"
+      - name: Read the catalog as the app does
+        run: uv run --no-project python check.py
