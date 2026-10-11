@@ -12,6 +12,16 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.12"
+      - name: Let git read PM Cockpit's repository while it is private
+        # A fine-grained token with read-only Contents access to that one repository, kept as this repository's
+        # Actions secret HOST_READ_TOKEN. Once PM Cockpit's repository is public, delete the secret: nothing else
+        # changes. Pull requests from forks get no secrets, so for them this step does nothing.
+        env:
+          HOST_READ_TOKEN: ${{ secrets.HOST_READ_TOKEN }}
+        run: |
+          if [ -n "$HOST_READ_TOKEN" ]; then
+            git config --global url."https://x-access-token:${HOST_READ_TOKEN}@github.com/skywalkr2/ProjectManagementAgent".insteadOf "https://github.com/skywalkr2/ProjectManagementAgent"
+          fi
       - name: Install PM Cockpit (without its web screens)
         env:
           PM_COCKPIT_WITHOUT_SCREENS: "1"
