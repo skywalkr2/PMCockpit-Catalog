@@ -6,49 +6,55 @@
 # person's own accounts. See the README for every field and the rules for being listed.
 version: 1
 packs:
-- id: google
-  name: Google mail and calendar
-  summary: Lets the assistant keep reading your Gmail and Google Calendar. It signs in as you on Google's own page and only reads.
-  publisher: &publisher skywalkr2   # the publisher, set once here for both packs
-  maintainers: true
-  updated: "2026-10-12"
-  version: 0.0.9
-  plugin_api: ">=0.3,<0.4"
-  price:
-    model: see_publisher
-  install: "Ask the publisher for the package file, then: uv tool install --with <the file> pm-cockpit"
-  demo: false
-  provides:
-    sign_ins: [google/account]
-    connectors: [google/calendar, google/mail]
-    connector_reads: {google/calendar: calendar, google/mail: mail}
-    triage_matchers: [google/mailing-lists, google/automatic-replies, google/answers-only]
-    help: [help.md]
-  requires:
-    network: [accounts.google.com, oauth2.googleapis.com, www.googleapis.com, gmail.googleapis.com]
-    secrets: [client-id, client-secret]
-    data_levels: [open, internal]
-    tools: []
-- id: microsoft
-  name: Microsoft Outlook mail and calendar
-  summary: Lets the assistant keep reading your Outlook mail and calendar. It signs in as you on Microsoft's own page and only reads.
-  publisher: *publisher
-  maintainers: true
-  updated: "2026-10-12"
-  version: 0.0.9
-  plugin_api: ">=0.3,<0.4"
-  price:
-    model: see_publisher
-  install: "Ask the publisher for the package file, then: uv tool install --with <the file> pm-cockpit"
-  demo: false
-  provides:
-    sign_ins: [microsoft/account]
-    connectors: [microsoft/calendar, microsoft/mail]
-    connector_reads: {microsoft/calendar: calendar, microsoft/mail: mail}
-    triage_matchers: [microsoft/mailing-lists, microsoft/automatic-replies, microsoft/answers-only]
-    help: [help.md]
-  requires:
-    network: [login.microsoftonline.com, graph.microsoft.com]
-    secrets: [client-id]
-    data_levels: [open, internal]
-    tools: []
+  - id: google
+    name: Google mail and calendar
+    summary: Lets the assistant keep reading your Gmail and Google Calendar. It signs in as you on Google's own page and only reads.
+    publisher: &publisher skywalkr2   # the publisher, set once here for both packs
+    maintainers: true
+    updated: "2026-10-22"
+    version: 0.0.10
+    plugin_api: ">=0.3,<0.4"
+    release:
+      url: https://api.github.com/repos/skywalkr2/Mail-Calendar-Integration-PMCockpit/releases/assets/666831330
+      sha256: 08b782ec3e2873ff239337b47944113d7180f169c1ba17d251f0b0a46c46b65a
+    price:
+      model: see_publisher
+    install: "Download the .whl file from the publisher's release, then: cockpit install <the file>"
+    demo: false
+    provides:
+      sign_ins: [google/account]
+      connectors: [google/calendar, google/mail]
+      connector_reads: {google/calendar: calendar, google/mail: mail}
+      triage_matchers: [google/mailing-lists, google/automatic-replies, google/answers-only]
+      help: [help.md]
+    requires:
+      network: [accounts.google.com, oauth2.googleapis.com, www.googleapis.com, gmail.googleapis.com]
+      secrets: [client-id, client-secret]
+      data_levels: [open, internal]
+      tools: []
+  - id: microsoft
+    name: Microsoft Outlook mail and calendar
+    summary: Lets the assistant keep reading your Outlook mail and calendar. It signs in as you on Microsoft's own page and only reads.
+    publisher: *publisher
+    maintainers: true
+    updated: "2026-10-22"
+    version: 0.0.10
+    plugin_api: ">=0.3,<0.4"
+    release:
+      url: https://api.github.com/repos/skywalkr2/Mail-Calendar-Integration-PMCockpit/releases/assets/666831330
+      sha256: 08b782ec3e2873ff239337b47944113d7180f169c1ba17d251f0b0a46c46b65a
+    price:
+      model: see_publisher
+    install: "Download the .whl file from the publisher's release, then: cockpit install <the file>"
+    demo: false
+    provides:
+      sign_ins: [microsoft/account]
+      connectors: [microsoft/calendar, microsoft/mail]
+      connector_reads: {microsoft/calendar: calendar, microsoft/mail: mail}
+      triage_matchers: [microsoft/mailing-lists, microsoft/automatic-replies, microsoft/answers-only]
+      help: [help.md]
+    requires:
+      network: [login.microsoftonline.com, graph.microsoft.com]
+      secrets: [client-id]
+      data_levels: [open, internal]
+      tools: []
