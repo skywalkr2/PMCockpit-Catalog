@@ -52,6 +52,10 @@ The host's session:
 - runs the check itself, runs the pack's tests, and tries it in the demo sandbox (`cockpit demo --plugin`);
 - opens a pull request here with the entry, saying what the pack adds, reaches and keeps, and what it asks for that
   its last listing didn't;
+- when the pack's own repository is private, puts the release's package file in this repository's `releases/` folder,
+  checked against the release's own checksum, and points the entry's `release.url` at its raw address on `main`, so
+  the app installs it with no access key (owner, 2026-10-28). Only the package file is public; the pack's repository
+  stays private;
 - or answers the request with what to fix.
 
 ## 6. The owner decides

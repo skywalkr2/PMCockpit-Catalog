@@ -15,11 +15,11 @@ packs:
     version: 0.1.0
     plugin_api: ">=0.3,<0.4"
     release:
-      url: https://api.github.com/repos/skywalkr2/Mail-Calendar-Integration-PMCockpit/releases/assets/667111039
+      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.0-py3-none-any.whl
       sha256: 7dfb6ae120aea8c9f8614a023afd93aab2dce7d54f519ce0abeb563c9c846c1a
     price:
       model: see_publisher
-    install: "Download the .whl file from the publisher's release, then: cockpit install <the file>"
+    install: "Install it from the Add-ons screen, or download its .whl file from this catalog's releases folder, then: cockpit install <the file>"
     demo: false
     provides:
       sign_ins: [google/account]
@@ -42,11 +42,11 @@ packs:
     version: 0.1.0
     plugin_api: ">=0.3,<0.4"
     release:
-      url: https://api.github.com/repos/skywalkr2/Mail-Calendar-Integration-PMCockpit/releases/assets/667111039
+      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.0-py3-none-any.whl
       sha256: 7dfb6ae120aea8c9f8614a023afd93aab2dce7d54f519ce0abeb563c9c846c1a
     price:
       model: see_publisher
-    install: "Download the .whl file from the publisher's release, then: cockpit install <the file>"
+    install: "Install it from the Add-ons screen, or download its .whl file from this catalog's releases folder, then: cockpit install <the file>"
     demo: false
     provides:
       sign_ins: [microsoft/account]
