@@ -8,15 +8,15 @@ version: 1
 packs:
   - id: google
     name: Google mail and calendar
-    summary: Lets the assistant keep reading your Gmail and Google Calendar, and act on them only after your yes on that exact change. It signs in as you on Google's own page.
+    summary: Lets the assistant keep reading your Gmail (your sent mail too) and Google Calendar, and act on them only after your yes on that exact change. It signs in as you on Google's own page.
     publisher: &publisher skywalkr2   # the publisher, set once here for both packs
     maintainers: true
-    updated: "2026-10-22"
-    version: 0.1.0
-    plugin_api: ">=0.3,<0.4"
+    updated: "2026-10-28"
+    version: 0.1.1
+    plugin_api: ">=0.3.90,<0.4"
     release:
-      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.0-py3-none-any.whl
-      sha256: 7dfb6ae120aea8c9f8614a023afd93aab2dce7d54f519ce0abeb563c9c846c1a
+      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.1-py3-none-any.whl
+      sha256: 9239acf2e6f24556bb8e23509bf0523b25110fee823f191609246b545a2f307b
     price:
       model: see_publisher
     install: "Install it from the Add-ons screen, or download its .whl file from this catalog's releases folder, then: cockpit install <the file>"
@@ -35,15 +35,15 @@ packs:
       tools: []
   - id: microsoft
     name: Microsoft Outlook mail and calendar
-    summary: Lets the assistant keep reading your Outlook mail and calendar. It signs in as you on Microsoft's own page and only reads.
+    summary: Lets the assistant keep reading your Outlook mail (your sent mail too) and calendar. It signs in as you on Microsoft's own page and only reads.
     publisher: *publisher
     maintainers: true
-    updated: "2026-10-22"
-    version: 0.1.0
-    plugin_api: ">=0.3,<0.4"
+    updated: "2026-10-28"
+    version: 0.1.1
+    plugin_api: ">=0.3.90,<0.4"
     release:
-      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.0-py3-none-any.whl
-      sha256: 7dfb6ae120aea8c9f8614a023afd93aab2dce7d54f519ce0abeb563c9c846c1a
+      url: https://raw.githubusercontent.com/skywalkr2/PMCockpit-Catalog/main/releases/pm_cockpit_mail_calendar-0.1.1-py3-none-any.whl
+      sha256: 9239acf2e6f24556bb8e23509bf0523b25110fee823f191609246b545a2f307b
     price:
       model: see_publisher
     install: "Install it from the Add-ons screen, or download its .whl file from this catalog's releases folder, then: cockpit install <the file>"
